@@ -145,7 +145,7 @@ class TranscriptionManager: ObservableObject {
         let lower = text.lowercased()
 
         // Match common transcription variants of "six seven"
-        let triggers = ["six seven", "six, seven", "6 7", "six-seven"]
+        let triggers = ["six seven", "six, seven", "6 7", "six-seven", "6-7"]
 
         guard triggers.contains(where: { lower.contains($0) }) else { return }
         guard !showMeme else { return }
